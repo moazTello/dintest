@@ -11,17 +11,18 @@ import DataContext from '../../../context/DataContext';
 
 const Navbar = () => {
     const { width } = useWindowSize();
-    const { navDisplay } = useContext(DataContext);
+    const { navDisplay,navtrans } = useContext(DataContext);
     const [ clicked , setClicked ] = useState(false);
+
     const handleClick = () => {
-        if(width<=650){
+        if(width<=900){
             setClicked(!clicked);
         }
     }
         return(
-            <nav className='NavbarItems'>
+            <nav className='NavbarItems' style={{backgroundColor:navtrans&&width>900 ? "rgba(255,255,255,0)" : "rgba(47,165,226,1)",position:navtrans&&width>900 ? "absolute" : "relative" , top:navtrans&&width>900 ? "80px" : "0px",transition:"all 1s ease-in-out"}}>
                 <p className='Navbar-logo'>
-                    Travel
+                    Teeth
                 </p>
                 <div className='menu-icon' onClick={handleClick}>
                     <i className='bar'>
@@ -30,10 +31,10 @@ const Navbar = () => {
                 </div>
                 <ul className={clicked ? 'nav-menu active' : 'nav-menu'}> 
                             <Link to='/about' className='nav-links' onClick={handleClick}>
-                                <p>حول الشركة</p> 
+                                <p>حول العيادة</p> 
                             </Link>
                             <Link to='/contactus'  className='nav-links'  onClick={handleClick}>
-                                <p>اتصل بنا</p> 
+                                <p>تواصل معنا</p> 
                             </Link>
                             <Link to='/login'className='nav-links' onClick={handleClick} style={{display:navDisplay ? 'block' : 'none'}} >
                                 <p>تسجيل الدخول</p> 

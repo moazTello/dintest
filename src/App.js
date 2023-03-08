@@ -12,7 +12,6 @@ import LogIn from './pages/LogIn';
 import Trips from './pages/Trips';
 import MyReservation from './pages/MyReservation';
 import ContactUs from './pages/ContactUs';
-import SelectFromTo from './pages/SelectFromTo';
 import Policy from './pages/Policy';
 import { DataProvider } from './context/DataContext';
 import UserProfile from './pages/UserProfile';
@@ -21,36 +20,24 @@ import MobilePage from './pages/MobilePage';
 import Team from './pages/Team';
 import EmployeeOrder from './pages/EmployeeOrder';
 import Safty from './pages/Safty';
+import HomeUser from './pages/HomeUser';
+import SelectTime from './pages/SelectTime';
 function App() {
   return (
     <DataProvider>
       <Routes>
           <Route path='/' element={<Layout/>}>
-          {/* <Route index element={<HomePage/>}/> */}
-          <Route path='/junior' element={<HomePage/>}/>
-          {/* <Route path='/login'>
-            <Route 
-              // path='/login'
-              index 
-              element={<LogIn/>}/>
-            <Route path='/login/:id' element={<Trips/>}/>
-            <Route 
-              path='/login/:id/selectfromto' 
-              element={<SelectFromTo/>}/>
-            <Route path='/login/:id/myreservation' element={<MyReservation/>}/>
-          </Route> */}
+          <Route path='/dintest' element={<HomePage/>}/>
           <Route path='/login'>
             <Route 
-              // path='/login'
               index 
               element={<LogIn/>}/>
             <Route path='/login/alltrips' element={<Trips/>}/>
-            <Route 
-              path='/login/:id/selectfromto' 
-              element={<SelectFromTo/>}/>
             <Route path='/login/myreservation' element={<MyReservation/>}/>
+            <Route path='/login/homeuser' element={<HomeUser/>}/>
+            <Route path='/login/userprofile' element={<UserProfile/>}/>
+            <Route path='login/:id/selecttime' element={<SelectTime/>}/>
           </Route>
-          <Route path='/login/userprofile' element={<UserProfile/>}/>
           <Route path='/contactus' element={<ContactUs/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/policy' element={<Policy/>}/>

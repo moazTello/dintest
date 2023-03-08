@@ -6,7 +6,9 @@
     width: 100%;
     /* position:fixed; */
     
-    background-color : rgb(63,138,226);
+    /* background-color : rgb(63,138,226); */
+    background-color : rgb(47,165,226);
+
     /* background-color : rgb(254,109,81); */
     height:80px;
     display: flex;
@@ -35,14 +37,18 @@
     text-decoration: none;
     padding: 0.5rem 0.5rem;
     transition: all 0.5s ease-in-out;
-    background-color:rgb(254,109,81);
-    background-color:rgb(63,138,226);
+    /* background-color:rgb(254,109,81); */
+    /* background-color:rgb(63,138,226); */
+    /* background-color : rgb(47,165,226); */
+
 
 }
 .nav-links:hover{
     background-color: white;
     /* color:rgb(254,109,81); */
-    color:rgb(63,138,226);
+    /* color:rgb(63,138,226); */
+    color : rgb(47,165,226);
+
 
     border-radius: 10px;
     transition: all 0.5s ease-in-out;
@@ -58,13 +64,17 @@
     width:100%;
     height: fit-content;
     /* background-color: rgb(254,109,81); */
-    background-color: rgb(63,138,226);
+    background-color: rgb(47,165,226);
+    /* background-color : white; */
+
     color:white;
+    /* color:rgb(47,165,226); */
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
-@media screen and (max-width:650px) {
+@media screen and (max-width:900px) {
     .NavbarItems{
         /* position: fixed; */
         width: 100%;
@@ -89,7 +99,9 @@
     }
     .nav-menu.active{
         /* background:rgb(254,109,81); */
-        background:rgb(63,138,226);
+        /* background:rgb(63,138,226); */
+        background-color : rgb(47,165,226);
+
         left:0;
         opacity: 1;
         transition: all 0.5 ease-in-out;

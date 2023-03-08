@@ -5,7 +5,9 @@ import { Link } from 'react-router-dom';
 import DataContext from '../context/DataContext';
 import useWindowSize from '../hooks/useWindowSize';
 const EmployeeOrder = () => {
-  const {handleEmployeeOrder,employeeJob,setEmployeeJob,employeeEmail,setEmployeeEmail,employeeLastName,setEmployeeLastName,employeeFirstName,setEmployeeFirstName} = useContext(DataContext);
+  const {handleEmployeeOrder,employeeJob,setEmployeeJob,
+    // employeeEmail,setEmployeeEmail,
+    employeeLastName,setEmployeeLastName,employeeFirstName,setEmployeeFirstName} = useContext(DataContext);
   const { width } = useWindowSize(); 
 //   console.log('About');
   return (
@@ -25,8 +27,8 @@ const EmployeeOrder = () => {
                     <label htmlFor='username' style={{
                         // color:"rgb(254,109,81)"
                         color:"rgb(63,138,226)",marginTop:"20px"
-                        }}>المسمى الوظيفي</label>
-                
+                        }}>السبب</label>
+{/*                 
                 <input 
                         className='inputs' 
                         style={{padding:"4px"}} 
@@ -39,7 +41,7 @@ const EmployeeOrder = () => {
                     <label htmlFor='username' style={{
                         // color:"rgb(254,109,81)"
                         color:"rgb(63,138,226)",marginTop:"20px"
-                        }}>عنوان البريد الالكتروني</label> 
+                        }}>عنوان البريد الالكتروني</label>  */}
                 <input 
                         className='inputs'
                         style={{padding:"4px"}} 
@@ -66,7 +68,7 @@ const EmployeeOrder = () => {
                         // color:"rgb(254,109,81)"
                         color:"rgb(63,138,226)",marginTop:"20px"
                         }}>اسم المرسل</label>
-                    <h3>طلب توظيف</h3>
+                    <h3>طلب مراجعة فورية</h3>
                 </div> 
                 <div className='addInput' style={{height: width>650 ?'80px' : '40px',padding:width > 650 ?'10px' : '0px',display:"flex",flexDirection:"row"}}>
                     <Link to="/junior" 

@@ -8,24 +8,6 @@ const Trip = ({trip,setResTrip}) => {
   return (
     <article className='tripcontent'>        
             <div className='trip'>
-                {/* <Link 
-
-                //       to={`/login/${trip.trip_id}/selectfromto`} 
-                      className='btn'
-                      style={{marginLeft:"0px",borderRadius:"0px",
-                              width:"80px",border:"none"
-                              ,textDecoration:'none',paddingTop:'5px'}}
-                      onClick={() =>  
-                                {
-                                console.log(trip.trip_id);
-                                setResTrip(trip.trip_id);
-                                viewReservation(trip.trip_id);
-                                }
-                        }  
-                      to={`/login/${trip.trip_id}/selectfromto`} 
-                >
-                        حجز
-                </Link> */}
                 <button 
                 className='btn'
                 style={{marginLeft:"0px",borderRadius:"0px",

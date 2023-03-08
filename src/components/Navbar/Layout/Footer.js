@@ -1,21 +1,21 @@
 import React from 'react';
 import { useEffect } from 'react';
-import { useState } from 'react';
+// import { useState } from 'react';
 import useWindowSize from '../../../hooks/useWindowSize';
-import smalllogo from '../../../images/smalllogo.svg';
-import small2logo from '../../../images/small2logo.svg';
+// import smalllogo from '../../../images/smalllogogreen.svg';
+// import small2logo from '../../../images/small2logogreen.svg';
 import { Link } from 'react-router-dom';
 import {BsFacebook} from 'react-icons/bs';
 import {AiFillTwitterCircle , AiFillInstagram ,AiFillLinkedin} from 'react-icons/ai';
 const Footer = () => {
   const {width} = useWindowSize();
-  const [logo,setLogo] = useState(smalllogo);
+  // const [logo,setLogo] = useState('');
   useEffect(() =>{
     if(width>650){
-      setLogo(smalllogo);
+      // setLogo(smalllogo);
     }
     else{
-      setLogo(small2logo);
+      // setLogo(small2logo);
     }
   },[width])
   return (
@@ -26,11 +26,9 @@ const Footer = () => {
             <Link to='/condetions' className='footertext'>شروط الاستخدام</Link>  
             <Link to='/policy' className='footertext'>سياسة الخصوصية</Link>   
             <Link to='/safty' className='footertext'>الأمان</Link>  
-            {/* <p className='footertext'>الأمان </p>   */}
-            {/* <p className='footertext'>شروط و أحكام</p>   */}
           </div>
           <div className='footercontainer'>
-            {/* <GiSandwich className='icons'/> */}
+            {/* <GiSandwich className='icons' size={16}/> */}
             <Link to='contactus' className='footertext'>هل تحتاج الى مساعدة</Link>
             <Link to='/login'className='footertext'>تسجيل الدخول</Link>  
             <Link to='/mobilepage' className='footertext'>تطبيق الهاتف المحمول</Link> 
@@ -38,13 +36,13 @@ const Footer = () => {
           </div>
           <div className='footercontainer'>
             {/* <FaToilet className='icons'/> */}
-            <Link to='/about' className='footertext'>حول الشركة</Link> 
+            <Link to='/about' className='footertext'>حول العيادة</Link> 
             {/* <p className='footertext'>الشراكة</p>  */}
-            <Link to='/Team' className='footertext'>الفريق</Link> 
-            <Link to='/employeeorder' className='footertext'>طلبات التوظيف</Link> 
+            <Link to='/Team' className='footertext'>الاطباء</Link> 
+            <Link to='/employeeorder' className='footertext'>طلبات المراجعة الفورية</Link> 
           </div>
           <div className='footercontainer'>
-            <img src={logo} alt=''/> 
+            {/* <img src={logo} alt=''/>  */}
             <div className='facebook'>
             <a href="https://www.facebook.com/photo?fbid=900680114680665&set=a.167878474627503">
               <BsFacebook size={32} style={{color:"white"}}/>
@@ -71,8 +69,7 @@ const Footer = () => {
             </a>
             <a href="https://moaztello.github.io/junior">
               <AiFillLinkedin size={18} style={{color:"white"}}/>
-            </a>
-            
+            </a> 
             </div>  
           </div>
         </div>

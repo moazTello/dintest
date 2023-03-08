@@ -12,7 +12,7 @@ const MyReservation = () => {
   return (
     <article className='container'>
         <div className='tripsschedul'>
-            <div style={{margin:'0px'}}>الحجوزات التي قمت بها </div>
+            <div style={{margin:'0px'}}>المواعيد السابقة التي قمت بها </div>
             <hr style={{width:'100%',marginTop:'5px',marginBottom:'5px'}}/>
             <div className='trip'>
                 <p className='tripitem'> الغاء</p>
@@ -30,7 +30,7 @@ const MyReservation = () => {
                 trip={trip}
                 handleDeleteTripUser={handleDeleteTripUser} />
             ))}
-            {!userTrips.length && <p style={{width:'100%',textAlign:'center',marginTop:'20px'}}>لا يوجد لديك اي حجوزات لعرضها</p>}
+            {!userTrips.length && <p style={{width:'100%',textAlign:'center',marginTop:'20px'}}>لا يوجد لديك اي مواعيد سابقة لعرضها</p>}
             </div>
             <hr/>
             <Link 

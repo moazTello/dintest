@@ -1,12 +1,19 @@
 .App{
   /* background: url('./images/background2.svg'); */
   /* background: url('./images/backgroundblue.svg'); */
-  background: url('./images/newintierbus.svg');
+  /* background: url('./images/newintierbus.svg'); */
+  background: url('./images/green.svg');
+  /* background: url('./images/homebus.svg'); */
+
+
   /* background: url(''); */
+  /* background-position:center; */
   background-position:center;
   background-repeat: no-repeat;
   background-size: cover;
+  /* background-size:contain; */
   height: 100vh;
+  /* height: fit-content; */
   /* min-height: 83vh; */
   width: 100%;
 }

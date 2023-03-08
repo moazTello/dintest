@@ -4,12 +4,17 @@ import { Link } from 'react-router-dom';
 import { useEffect,useState,useContext } from 'react';
 import useWindowSize from '../hooks/useWindowSize';
 import DataContext from '../context/DataContext';
-
+import tooth from '../images/tooth1.svg';
 const LogIn = () => {
-    const {userName,setUserName,handleSubmitlogin,password,setPassword} = useContext(DataContext);
+    const {userName,setUserName,handleSubmitlogin,password,setPassword,setNavtrans} = useContext(DataContext);
     const { width } = useWindowSize();
     const [hover,setHover] = useState(false);
     const [ valh,setValh ] = useState('60px');
+    const [flood,setFlood] = useState(false);
+    useEffect(() => {
+        setNavtrans(false);
+
+    },[setNavtrans])
     useEffect(() => {
         if(width > 650){
             if(userName && password !== '' ){
@@ -42,9 +47,15 @@ const LogIn = () => {
     const Register = () => {
         alert('عذرآ تم الغاء التسجيل من خارج الشركة يمكنك التسجيل فقط ضمن الشركة');
     }
+    const toothshake = () => {
+        setFlood(!flood);
+    }
     return (
     <div className='container'>
-        <div className='loginbox'>
+        <div style={{transition:"all 3s ease-in-out"}}>
+            <img src={tooth} alt='1' style={{width:"400px",hight:"400px",marginRight:"100px",display:width>1100?"block":"none",transform:flood? "translate(-45%,0%)":"translate(0%,0%)",transition:"all 1.5s ease-in-out",}}/>
+        </div>
+        <div className='loginbox' onMouseEnter={toothshake} onMouseLeave={toothshake} style={{transform:flood&&width>1100? "translate(-55%,0%)":"translate(0%,0%)",transition:"all 2s ease-in-out"}}>
            <img src={LoginPerson} alt='' className='LoginPerson'/>
            <form className='newclassform' onSubmit={handleSubmitlogin} >
                 <div className='addInput'> 
@@ -57,9 +68,8 @@ const LogIn = () => {
                         onChange={(e) => setUserName(e.target.value)}
                     />
                     <label htmlFor='username' style={{
-                        // color:"rgb(254,109,81)"
-                        color:"rgb(63,138,226)"
-                        }}>رقم الجوال</label>
+                        color:"rgb(47,165,226)"
+                        }}>اسم المستخدم</label>
                 </div> 
                 <div className='addInput'> 
                     <input 
@@ -71,8 +81,7 @@ const LogIn = () => {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                     <label htmlFor='password' style={{
-                        // color:"rgb(254,109,81)"
-                        color:"rgb(63,138,226)"
+                        color:"rgb(47,165,226)"
                         }}>كلمة المرور</label>
                 </div>
                 <div className='addInput' style={{height: width>650 ?'80px' : '40px',padding:width > 650 ?'10px' : '0px'}}>

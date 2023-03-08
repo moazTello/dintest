@@ -1,13 +1,15 @@
 import React from 'react';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import './Classes.css';
 import { Link } from 'react-router-dom';
 import DataContext from '../context/DataContext';
 import useWindowSize from '../hooks/useWindowSize';
 const ContactUs = () => {
-  const {FeedBack,setFeedBack,handleFeedBack,emailsender,setEmailsender,personFeed,setPersonFeed} = useContext(DataContext);
-  const { width } = useWindowSize(); 
-//   console.log('About');
+  const {FeedBack,setFeedBack,handleFeedBack,emailsender,setEmailsender,personFeed,setPersonFeed,setNavtrans} = useContext(DataContext);
+  const { width } = useWindowSize();
+  useEffect(() => {
+    setNavtrans(false);
+}) 
   return (
     <div className='container'>
         <div className='contactbox' height="700px">
@@ -23,9 +25,8 @@ const ContactUs = () => {
                         onChange={(e) => setFeedBack(e.target.value)}
                     />
                     <label htmlFor='username' style={{
-                        // color:"rgb(254,109,81)"
                         color:"rgb(63,138,226)",marginTop:"20px"
-                        }}>الرسالة المراد ارسالها الى الشركة</label>
+                        }}>الرسالة المراد ارسالها الى الطبيب</label>
                 
                 <input 
                         className='inputs' 
@@ -37,9 +38,8 @@ const ContactUs = () => {
                         onChange={(e) => setEmailsender(e.target.value)}
                     />
                     <label htmlFor='username' style={{
-                        // color:"rgb(254,109,81)"
                         color:"rgb(63,138,226)",marginTop:"20px"
-                        }}>عنوان البريد الالكتروني</label> 
+                        }}>الكنية</label> 
                 <input 
                         className='inputs'
                         style={{padding:"4px"}} 

@@ -12,7 +12,7 @@ const Trips = () => {
   return (
     <article className='container'>
         <div className='tripsschedul'>
-            <div style={{margin:'0px'}}>الرحلات المتوفرة</div>
+            <div style={{margin:'0px'}}>المواعيد المتوفرة</div>
             <hr style={{width:'100%',marginTop:'5px',marginBottom:'5px'}}/>
             <div className='trip'>
                 <p className='tripitem'> حجز</p>
@@ -33,7 +33,7 @@ const Trips = () => {
                 setResTrip={setResTrip}
                 />
             ))}
-            {!trips.length && <p style={{width:'100%',textAlign:'center',marginTop:'20px'}}>لا يوجد اي حجوزات لعرضها</p>}
+            {!trips.length && <p style={{width:'100%',textAlign:'center',marginTop:'20px'}}>لا يوجد اي مواعيد لعرضها</p>}
             </div>
             <hr/>
             <div className='trip' style={{justifyContent:'center'}}>
@@ -46,7 +46,7 @@ const Trips = () => {
                                 paddingTop:''}}
                         // onClick={() => {}}    
                     >
-                        حجوزاتي
+                        مواعيدي 
                 </Link>
                 <Link 
                         to={`/login/userprofile`}
